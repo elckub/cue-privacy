@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<meta name="description" content="Cue(큐) 앱 개인정보처리방침">
+<title>개인정보처리방침 · Cue</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg-primary: #FAFAFA;
+    --bg-secondary: #FFFFFF;
+    --bg-tertiary: #F3EEFF;       /* 표 헤더용 연보라 */
+    --border: #E5E7EB;
+    --border-strong: #D1D5DB;
+    --purple-accent: #A78BFA;     /* Cue 브랜드 — 장식용 */
+    --purple-mid: #8B5CF6;        /* 중간 톤 */
+    --purple-text: #7C3AED;       /* 흰 배경에서 읽기 좋은 보라 */
+    --purple-deep: #6D28D9;
+    --text-primary: #111827;      /* 본문 강조 */
+    --text-secondary: #374151;    /* 본문 */
+    --text-muted: #6B7280;        /* 메타/캡션 */
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Pretendard", "Segoe UI", "Malgun Gothic", "맑은 고딕",
+                 system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 32px;
+    margin-bottom: 40px;
+  }
+
+  .brand {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--purple-text);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    padding: 4px 10px;
+    background: var(--bg-tertiary);
+    border-radius: 6px;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+  }
+
+  .lead {
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.75;
+    margin-bottom: 20px;
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  .meta span strong {
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  h2 {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+    margin-top: 56px;
+    margin-bottom: 16px;
+    padding-left: 14px;
+    border-left: 4px solid var(--purple-accent);
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--purple-text);
+    margin-top: 24px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+    font-size: 15px;
+  }
+
+  ul {
+    list-style: none;
+    margin-bottom: 14px;
+  }
+
+  ul li {
+    color: var(--text-secondary);
+    font-size: 15px;
+    padding-left: 18px;
+    position: relative;
+    margin-bottom: 8px;
+    line-height: 1.7;
+  }
+
+  ul li::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 12px;
+    width: 5px;
+    height: 5px;
+    background: var(--purple-accent);
+    border-radius: 50%;
+  }
+
+  strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  a {
+    color: var(--purple-text);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(124, 58, 237, 0.3);
+    transition: border-color 0.15s;
+  }
+
+  a:hover {
+    border-bottom-color: var(--purple-text);
+  }
+
+  hr {
+    display: none;
+  }
+
+  /* Table — third-party list */
+  .table-wrap {
+    margin: 20px 0 24px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--bg-secondary);
+  }
+
+  .table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    min-width: 560px;
+  }
+
+  thead {
+    background: var(--bg-tertiary);
+  }
+
+  th {
+    text-align: left;
+    padding: 14px 16px;
+    color: var(--purple-deep);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 14px 16px;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    line-height: 1.6;
+  }
+
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  tbody tr:nth-child(even) {
+    background: #FAFAFA;
+  }
+
+  .scroll-hint {
+    display: none;
+    font-size: 12px;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 8px 12px;
+    border-top: 1px solid var(--border);
+    background: var(--bg-tertiary);
+  }
+
+  .contact-card {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 16px 0 8px;
+  }
+
+  .contact-card ul li {
+    margin-bottom: 6px;
+  }
+
+  footer {
+    margin-top: 80px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+
+  footer .copy {
+    margin-top: 8px;
+  }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    .container {
+      padding: 40px 20px 64px;
+    }
+
+    h1 {
+      font-size: 26px;
+    }
+
+    h2 {
+      font-size: 19px;
+      margin-top: 44px;
+    }
+
+    h3 {
+      font-size: 15px;
+    }
+
+    p, ul li {
+      font-size: 14.5px;
+    }
+
+    .scroll-hint {
+      display: block;
+    }
+
+    th, td {
+      padding: 12px 14px;
+      font-size: 13px;
+    }
+
+    .contact-card {
+      padding: 16px 18px;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .container {
+      padding: 32px 16px 48px;
+    }
+
+    h1 {
+      font-size: 23px;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <span class="brand">Cue</span>
+    <h1>개인정보처리방침</h1>
+    <p class="lead">
+      <strong>Cue</strong>(이하 "서비스")는 이용자의 개인정보를 중요하게 생각하며, 「개인정보 보호법」 등 관련 법령을 준수합니다. 본 방침은 서비스가 어떤 정보를 수집하고, 어떻게 이용·보관·보호하는지를 설명합니다.
+    </p>
+    <div class="meta">
+      <span><strong>시행일</strong> 2026년 5월 26일</span>
+      <span><strong>최종 개정일</strong> 2026년 5월 26일</span>
+    </div>
+  </header>
+
+  <section>
+    <h2>1. 수집하는 개인정보 항목</h2>
+    <p>서비스는 다음의 정보를 수집합니다.</p>
+
+    <h3>가. 회원 가입 및 로그인 시</h3>
+    <ul>
+      <li><strong>소셜 로그인 정보</strong>: Google 또는 Apple 계정을 통한 로그인 시 제공되는 식별 정보 및 이메일 주소 (이용자가 Apple "이메일 가리기"를 선택한 경우 익명 릴레이 이메일이 제공될 수 있습니다)</li>
+      <li><strong>닉네임</strong>: 이용자가 직접 입력한 표시 이름</li>
+      <li>게스트(비회원) 이용 시에는 익명 식별자만 부여되며 별도의 계정 정보를 수집하지 않습니다.</li>
+    </ul>
+
+    <h3>나. 서비스 이용 과정에서 이용자가 입력하는 정보</h3>
+    <ul>
+      <li>목표 및 퀘스트 내용</li>
+      <li>온보딩 답변(가용 시간, 현재 수준 등) 및 자기 발견 답변</li>
+      <li>퀘스트 메모, 응원 메시지, 내기(챌린지) 정보 등 이용자가 자유롭게 작성한 텍스트</li>
+      <li>친구 관계 정보(친구 요청·수락, 팔로우 등)</li>
+    </ul>
+
+    <h3>다. 서비스 이용 과정에서 자동으로 생성·수집되는 정보</h3>
+    <ul>
+      <li>활동 기록(퀘스트 완료 여부, 레벨, 경험치(XP), 연속 달성일 등)</li>
+      <li>알림 설정값</li>
+      <li>구독 및 결제 상태 정보</li>
+      <li>활동 패턴 분석 결과(달성 패턴, 주간 리포트 등)</li>
+      <li>운영체제 버전, 앱 버전, 비식별 기기 식별자(서비스 업데이트 제공 목적)</li>
+    </ul>
+
+    <h3>라. 결제 시</h3>
+    <ul>
+      <li>구독 상품 정보 및 구독 상태</li>
+      <li>실제 결제 수단 정보(카드번호 등)는 Apple을 통해 처리되며 서비스가 직접 수집·저장하지 않습니다.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>2. 개인정보의 수집 및 이용 목적</h2>
+    <p>수집한 정보는 다음 목적으로만 이용합니다.</p>
+    <ul>
+      <li>회원 식별 및 계정 관리, 로그인 유지</li>
+      <li>AI 기반 맞춤형 커리큘럼·서브퀘스트·주간 리포트 생성</li>
+      <li>친구·응원·내기(챌린지) 등 소셜 기능 제공</li>
+      <li>구독 결제 및 프리미엄 기능 관리</li>
+      <li>활동 패턴 분석을 통한 서비스 품질 개선</li>
+      <li>공지사항 전달 및 이용자 문의 응대</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>3. AI를 통한 자동화 처리 안내</h2>
+    <p>서비스는 이용자가 입력한 목표·온보딩 답변 등을 인공지능(AI)에 전송하여 커리큘럼, 서브퀘스트, 주간 요약 등을 자동으로 생성합니다.</p>
+    <ul>
+      <li>AI가 생성한 모든 결과는 이용자가 직접 수정·재생성·거부할 수 있습니다.</li>
+      <li>AI 생성을 위해 입력 텍스트가 아래 제5조의 국외 제3자(Anthropic 등)에게 전송됩니다.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>4. 개인정보의 보유 및 이용 기간</h2>
+    <ul>
+      <li>서비스는 이용자가 회원으로 있는 기간 동안 개인정보를 보유합니다.</li>
+      <li>이용자가 계정을 삭제하면, 관련된 모든 개인정보가 <strong>즉시 영구 삭제</strong>됩니다(인증 계정 및 연결된 모든 데이터 포함).</li>
+      <li>다만, 이용자가 달성 기록을 외부(SNS 등)에 공유한 경우, 해당 공유 링크는 계정 삭제 후에도 외부 플랫폼에 남아 있을 수 있으며 이는 서비스의 통제 범위를 벗어납니다.</li>
+      <li>관련 법령에 따라 보존 의무가 있는 경우 해당 기간 동안 보관할 수 있습니다.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>5. 개인정보의 제3자 제공 및 처리위탁 (국외 이전 포함)</h2>
+    <p>서비스는 원활한 서비스 제공을 위해 다음의 사업자에게 개인정보 처리를 위탁하며, 이들 사업자의 서버는 국외(미국)에 위치합니다.</p>
+
+    <div class="table-wrap">
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>수탁자</th>
+              <th>위탁 업무</th>
+              <th>이전 항목</th>
+              <th>보유·이용 기간</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Supabase Inc. (미국)</td>
+              <td>데이터 저장·관리, 회원 인증</td>
+              <td>계정 정보, 서비스 이용 데이터 전반</td>
+              <td>회원 탈퇴 시까지</td>
+            </tr>
+            <tr>
+              <td>Anthropic, PBC (미국)</td>
+              <td>AI 커리큘럼·리포트 생성</td>
+              <td>목표, 온보딩·자기발견 답변 등 입력 텍스트</td>
+              <td>처리 후 일정 기간 내 삭제</td>
+            </tr>
+            <tr>
+              <td>Google LLC (미국)</td>
+              <td>소셜 로그인 인증, 영상 콘텐츠 검색</td>
+              <td>인증 정보, (검색 시) 비식별 검색어</td>
+              <td>인증 처리 시</td>
+            </tr>
+            <tr>
+              <td>Apple Inc. (미국)</td>
+              <td>소셜 로그인 인증, 결제 처리</td>
+              <td>인증 정보, 구독 결제 정보</td>
+              <td>결제 처리 시</td>
+            </tr>
+            <tr>
+              <td>RevenueCat, Inc. (미국)</td>
+              <td>구독 결제 검증·관리</td>
+              <td>이용자 식별자, 구독 상태 정보</td>
+              <td>구독 유지 기간</td>
+            </tr>
+            <tr>
+              <td>Expo (미국)</td>
+              <td>앱 업데이트 제공</td>
+              <td>OS·앱 버전, 비식별 기기 식별자</td>
+              <td>업데이트 제공 시</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="scroll-hint">← 좌우로 스크롤하여 전체 표 보기 →</div>
+    </div>
+
+    <p>이용자는 위 국외 이전에 동의하지 않을 권리가 있으나, 동의하지 않을 경우 서비스의 핵심 기능 이용이 제한될 수 있습니다.</p>
+  </section>
+
+  <section>
+    <h2>6. 이용자 및 법정대리인의 권리와 행사 방법</h2>
+    <p>이용자는 언제든지 다음의 권리를 행사할 수 있습니다.</p>
+    <ul>
+      <li><strong>계정 및 데이터 삭제</strong>: 앱 내 [프로필 → 계정 삭제]에서 직접 삭제할 수 있습니다.</li>
+      <li><strong>로그아웃 및 알림 설정 변경</strong>: 앱 내에서 직접 가능합니다.</li>
+      <li><strong>닉네임 변경</strong>: 앱 내에서 가능합니다.</li>
+      <li><strong>개인정보 열람·정정·처리정지 요청</strong>: 아래 문의처를 통해 요청하실 수 있으며, 서비스는 지체 없이 처리합니다.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>7. 만 14세 미만 아동에 관한 사항</h2>
+    <p>서비스는 <strong>만 14세 이상</strong>의 이용자를 대상으로 합니다. 만 14세 미만 아동의 가입 및 이용을 허용하지 않으며, 만 14세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다.</p>
+  </section>
+
+  <section>
+    <h2>8. 개인정보의 안전성 확보 조치</h2>
+    <ul>
+      <li>개인정보는 접근 권한이 통제된 데이터베이스에 저장됩니다.</li>
+      <li>인증 토큰 등 민감 정보는 암호화하여 처리합니다.</li>
+      <li>결제 정보는 서비스가 직접 보관하지 않고 Apple을 통해 처리됩니다.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>9. 광고 및 분석 도구</h2>
+    <ul>
+      <li>서비스는 광고를 게재하지 않으며, 광고 목적의 개인정보를 수집하지 않습니다.</li>
+      <li>제3자 분석·추적 도구(예: 광고 식별자 기반 추적)를 사용하지 않습니다.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>10. 푸시 알림</h2>
+    <ul>
+      <li>푸시 알림은 이용자의 선택(권한 허용)에 따라 제공됩니다.</li>
+      <li>알림을 거부하더라도 알림 기능 외 서비스 이용에는 제한이 없습니다.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>11. 개인정보 보호책임자 및 문의처</h2>
+    <p>개인정보 처리에 관한 문의, 불만, 권리 행사는 아래로 연락 주시기 바랍니다.</p>
+    <div class="contact-card">
+      <ul>
+        <li><strong>개인정보 보호책임자</strong>: 이지형</li>
+        <li><strong>이메일</strong>: <a href="mailto:tkussuv@gmail.com">tkussuv@gmail.com</a></li>
+        <li><strong>연락처</strong>: 010-5813-2205</li>
+        <li><strong>앱 내 문의</strong>: [프로필 → 문의하기]</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>12. 고지의 의무</h2>
+    <p>본 개인정보처리방침의 내용 추가·삭제·수정이 있을 경우, 시행 전 앱 내 공지 또는 본 페이지를 통해 안내합니다.</p>
+  </section>
+
+  <footer>
+    <div>Cue · 개인정보처리방침</div>
+    <div class="copy">© 2026 Cue. All rights reserved.</div>
+  </footer>
+
+</div>
+</body>
+</html>
